@@ -1,0 +1,44 @@
+#summary Hibernate Sessions Management
+
+==Hibernate Session Interceptor==
+
+This plugin provides an Interceptor that open and close Hibernate sessions automatically, following some _configuration constants_ for project configuration or _parameters_ for interceptor/stack configuration (see below).
+
+
+===Configuration Constants by Project===
+
+     You can configure the *Hibernate Session Interceptor* once by project using configuration constants. This can be done in *struts.properties* or in *struts.xml* (using the *constant* tag).
+
+  * *_struts2hibernateplugin.defaults.sessionFactoryClass_* - Project Hibernate Session Factory
+Example: com.myproject.hibernate.HibernateSessionFactory
+<br/>
+
+  * *_struts2hibernateplugin.defaults.sessionSource_* - Getter in the class named in _sessionFactoryClass_ that returns a Hibernate Sessoin
+Example: _session_ (indicates the _getSession()_ method)
+<br/>
+
+  * *_struts2hibernateplugin.defaults.target_* - Target object in Action. You can use *Wildcard* (asterisk `*`)  
+Examples: _hibernateSession_; _facade.hibernateSession_
+Examples using *wildcard*: _hibernateSession`*`_; _`*`Facade.hibernateSession_
+<br/>
+
+  * *_struts2hibernateplugin.defaults.staticGetSessionMethod_* - Is the method named in _sessionSource_ static?. Optional. Default *true*.
+
+  * *_struts2hibernateplugin.defaults.closeSessionAfterInvoke_* - Close the Hibernate Session after Action invokation? Optional. Default *true*.
+
+  * *_struts2hibernateplugin.defaults.rebuildSessionFactoryMethod_* - Full name of the method that (re)build the SessionFactory. Optional. Use this constant if you want to use the *Hibernate Management* feature.  
+
+  * *_struts2hibernateplugin.defaults.staticRebuildSessionFactoryMethod_* - Is the rebuild session factory method static? Optional. Default *true*.
+
+===Parameters for custom Interceptors/Stacks===
+     Also using _Configuration Constants by Project_, you can create custom Interceptor Stacks with diferent configurations, using paratemers.
+
+  * *_sessionFactoryClass_* - Project Hibernate Session Factory
+
+  * *_sessionSource_* - Getter in the class named in _sessionFactoryClass_ that returns a Hibernate Sessoin
+
+  * *_target_* - Target object in Action. You can use *Wildcard* (asterisk `*`)  
+
+  * *_staticGetSessionMethod_* - Is the method named in _sessionSource_ static?. Optional. Default *true*.
+
+  * *_closeSessionAfterInvoke_* - Close the Hibernate Session after Action invokation? Optional. Default *true*.
