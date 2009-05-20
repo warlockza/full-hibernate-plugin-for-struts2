@@ -202,14 +202,14 @@ In this Action, there are 3 fields, but just 2 will be validated in requests (if
 
 = Details _(FAQ style)_ =
 
-*Q1:* <font color="navy">My Entity class has 10 fields with Hibernate Validator annotations, but in a specific Action in my project i would like to submit and only 3 field of this class. What can i do?</font> <br/>
+*Q1: <font color="navy">My Entity class has 10 fields with Hibernate Validator annotations, but in a specific Action in my project i would like to submit and only 3 field of this class. What can i do?</font>*<br/>
 *A1:* Peace of cake! This plugin validates only fields in the request. In the case on question, if the 3 fields pass in validation, the action will run fine.
 
 
-*Q2:* <font color="navy">I have an Entity class object with Hibernate Validator annotations in my Action. But this Action has 2 mapped actions. In one of this i need validation and in the other, not.What can i do?</font> <br/>
+*Q2: <font color="navy">I have an Entity class object with Hibernate Validator annotations in my Action. But this Action has 2 mapped actions. In one of this i need validation and in the other, not.What can i do?</font>* <br/>
 *A2:* This plugin has an interceptor stack that do not validate: *basicStackHibernate*. This one only use the Hibernate Core session and transaction injections.
 
-*Q3:* <font color="navy">What about Struts2 validations (annotations and XML)?</font> <br/>
+*Q3: <font color="navy">What about Struts2 validations (annotations and XML)?</font>* <br/>
 *A3:* This plugin has 3 interceptor stacks:
   * *basicStackHibernate*: Like Struts2 *basickStack* (NO validations here!), but with Hibernate Core session and transaction injections capability.<br/>
   * *defaultStackHibernate*: Like Struts2 *defaultStack*, but _DO NOT USE_ Struts2 validation methods (annotation and XML). Uses Hibernate Validation framework instead.<br/>
