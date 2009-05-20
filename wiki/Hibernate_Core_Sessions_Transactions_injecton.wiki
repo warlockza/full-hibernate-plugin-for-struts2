@@ -12,7 +12,7 @@ This feature follows the concepts in http://www.hibernate.org/43.html
 
 
 
-
+<hr/>
 = Usage =
 
 If you want to use the Hibernate Core Sessions and Transactions injection capability, your(s) package(s) <u>need</u> to extend the package _*hibernate-default*_.
@@ -65,6 +65,7 @@ If you do not use a custom class as a Hibernate Session Factory and don't wanna 
 *hibernatePlugin.sessionTarget* and *hibernatePlugin.transactionTarget*.
 
 
+<hr/>
 = More details about "hibernate-default" package =
 
 This plugin provides a mapping package called _*hibernate-default*_. And this has 3 interceptor stacks indicated for general use:
