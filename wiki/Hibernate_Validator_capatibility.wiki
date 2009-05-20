@@ -8,14 +8,14 @@ Following the DRY (Don't Repeat Yourself) principle, Hibernate Validator let's y
 
 Annotations are a very convenient and elegant way to specify invariant constraints on the domain model implementation, the persistent classes. Hibernate Validator comes bundled with a set of common validations (@NotNull, @Email, @Max, and so on), and you can build you own validation rules very easily.
 
-More at this framework at http://www.hibernate.org/412.html
+More about this framework at http://www.hibernate.org/412.html
 
 Hibernate Validator Manual:<br/>
 [http://www.hibernate.org/hib_docs/validator/reference/en/pdf/hibernate_validator.pdf PDF version]<br/>
 [http://www.hibernate.org/hib_docs/validator/reference/en/html_single/ HTML version]
 
 
-= Using this =
+= Usage =
 
 ==Validating Entity POJOs==
 
@@ -51,7 +51,8 @@ _Example:_
         // ... getters and setters ...
     }
 }}}
-<font color="red">*=> _Validation annotations as need..._*</font>
+<font color="red">*=> _Validation annotations as need..._*</font><br/>
+*Important: *_You can use Hibernate Validator annotations when using XML mapping files and in JPA/EJB annotated Entity classes. In both cases this plugin works fine._
 
 
 *Struts XML mapping file: struts.xml
@@ -161,3 +162,8 @@ If the Entity class reference at the Action is *player*, so the Value Stack keys
 If no key acording the Value Stack item name key found, the message WILL BE created BUT *without* the field label.
 The result would be this: <br/>
 <img src="http://lh6.ggpht.com/_BudW2b3yOHU/ShP3SEa-I-I/AAAAAAAAABs/95ofRnvpAnY/formSoccerPlayersAfterSubmitNoLabel.JPG" border=1/>
+
+
+= Details =
+
+Question: *My Entity class has 10 fields with Hibernate Validator, but in a specific Action in my project i would like to submit and only 3 field of this class*
