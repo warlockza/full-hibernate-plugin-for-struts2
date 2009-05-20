@@ -33,28 +33,30 @@ This properties are:
   This property is *Optional*. <br/>Default <b>/hibernate.cfg.xml</b>
 
 
+  * *hibernatePlugin.configurationType*: Hibernate Configuration Type. Values: <b>xml</b> or <b>annotation</b>. <br/>Note that if <b>hibernatePlugin.customSessionFactoryClass</b> property is used that is not guarantee about the using of the configuration type named here. <br/><b>Optional</b><br/>Default <b>xml</b>. 
+
+
   * *hibernatePlugin.customSessionFactoryClass*: Full qualified name of the custom class used as a Hibernate Session Factory.
   This property is *Optional*. If not used, the Hibernate Plugin will use an internal Session Factory Class (com.googlecode.s2hibernate.struts2.plugin.util.HibernateSessionFactory).
 
 
-  * *hibernatePlugin.transactionTarget*: Hibernate Transaction Target in the Action ValueStack. This property can be used in 2 ways:
+  * *hibernatePlugin.getSessionMethod*: Method used to get the Hibernate Session from the Session Factory class configured at <b>hibernatePlugin.customSessionFactoryClass</b>.
+  <br/>Examples: <code>getSession</code>; <code>getHibernateSession</code>
+<br/><b>Optional</b>, but <b>Required</b> if <b>hibernatePlugin.customSessionFactoryClass</b> property is used.
+
+
+  * *hibernatePlugin.rebuildSessionFactoryMethod*: Public method from the Hibernate Session Factory class for rebuild configurations. <br/><b>Optional</b>, but <b>Required</b> if <b>hibernatePlugin.customSessionFactoryClass</b> property is used.
+
+
+  * *hibernatePlugin.staticGetSessionMethod*: Hibernate Transaction Target in the Action ValueStack. This property can be used in 2 ways:
   This property is *REQUIRED*.
 
 
-  * *hibernatePlugin.transactionTarget*: Hibernate Transaction Target in the Action ValueStack. This property can be used in 2 ways:
-  This property is *REQUIRED*.
+  * *hibernatePlugin.staticRebuildSessionFactoryMethod*: Is the method used to get the Hibernate Session static? If <b>true</b> the method if used in static mode (ie. <code>MySessionFactoryClass.getSession()</code>).<br/> If <b>false</b> the Hibernate Plugin will instantiate the Session Factory class. <br/><b>Optional</b>, but <b>Required</b> if <b>hibernatePlugin.customSessionFactoryClass</b> property is used. <br/>Default <b>true</b>.
 
 
-  * *hibernatePlugin.transactionTarget*: Hibernate Transaction Target in the Action ValueStack. This property can be used in 2 ways:
-  This property is *REQUIRED*.
+  * *hibernatePlugin.closeSessionAfterInvoke*:If <b>true</b>, the Hibernate Session of the request will be closed after the response. <br/>If <b>false</b>, the Hibernate Session of the request WILL NOT be closed after the response. <br/><b>Optional</b> <br/>Default <b>true</b>.
 
-
-  * *hibernatePlugin.transactionTarget*: Hibernate Transaction Target in the Action ValueStack. This property can be used in 2 ways:
-  This property is *REQUIRED*.
-
-
-  * *hibernatePlugin.transactionTarget*: Hibernate Transaction Target in the Action ValueStack. This property can be used in 2 ways:
-  This property is *REQUIRED*.
 
 = More details about "hibernate-default" package =
 
