@@ -6,6 +6,17 @@ This feature provides an WEB front-end tool for view and reload your Hibernate C
 
 Yout can provide this tool in your context in a public way or protect this by 2 ways: IPs/Hosts list or HTTP Autentication.
 
+==Screenshots==
+
+Main Page:<br/>
+<img src="http://lh3.ggpht.com/_BudW2b3yOHU/ShRRL9x7yUI/AAAAAAAAACI/Zd9KgquVT5E/s576/manager1.JPG"/> <hr/>
+
+Click in configuration(s) file(s):<br/>
+<img src="http://lh3.ggpht.com/_BudW2b3yOHU/ShRRMNAeyOI/AAAAAAAAACM/f2tDNgo23KU/s576/manager2.JPG"/> <hr/>
+
+After reload Hibernate Configurations:<br/>
+<img src="http://lh6.ggpht.com/_BudW2b3yOHU/ShRRMJZZ3tI/AAAAAAAAACQ/4mifWNlJE14/s512/manager3.JPG"/> <hr/>
+
 
 = Security Configurations =
 
@@ -28,4 +39,3 @@ This property is *Optional*.
 
 If you want to allow public access to this tool, use the value *true* here.
 This property is *Optional*. Default *false*.
-  * Text in *bold* or _italic_
