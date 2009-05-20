@@ -1,0 +1,79 @@
+#summary Hibernate Validator capatibility
+
+= Introduction =
+
+Hibernate Validator is a fantastic validation framework. 
+
+Following the DRY (Don't Repeat Yourself) principle, Hibernate Validator let's you express your domain constraints once (and only once) and ensure their compliance at various level of your system automatically.
+
+Annotations are a very convenient and elegant way to specify invariant constraints on the domain model implementation, the persistent classes. Hibernate Validator comes bundled with a set of common validations (@NotNull, @Email, @Max, and so on), and you can build you own validation rules very easily.
+
+More at this framework at http://www.hibernate.org/412.html
+
+Hibernate Validator Manual:
+[http://www.hibernate.org/hib_docs/validator/reference/en/pdf/hibernate_validator.pdf PDF version]<br/>
+[http://www.hibernate.org/hib_docs/validator/reference/en/html_single/ HTML version]
+
+
+= Using this =
+
+==Validating Entity POJOs==
+
+If you have an Entity POJO with specific validation annotations, just use the _@Valid_ annotation over a declaration or a setter method of this in the Action!
+
+_Example:_
+
+*Entity class: Soccerplayer.java*
+{{{
+    public class Soccerplayer implements java.io.Serializable {
+
+        private Integer idplayer;
+	
+	@NotNull
+	@Valid
+	private Soccerteam soccerteam;
+	
+	@NotEmpty
+	@Length(min=2, max=20)
+	private String name;
+	
+	@NotNull
+	@Past
+	private Date birthdate;
+	
+	@Min(value=1)
+	@Max(value=2)
+	private Float height;
+	
+	@Length(max=100)
+	private String notes;
+
+        // ... getters and setters ...
+    }
+}}}
+
+
+*Action class: Soccerplayer.java*
+{{{
+    public class ManagePlayersAction extends ActionSupport{
+	
+	@Valid
+	Soccerplayer player = new Soccerplayer();
+    
+        // ... getters, setters and action methods ( ie. execute() ) ...
+
+    }
+}}}
+
+
+*Struts XML mapping file: struts.xml
+{{{
+    public class ManagePlayersAction extends ActionSupport{
+	
+	@Valid
+	Soccerplayer player = new Soccerplayer();
+    
+        // ... getters, setters and action methods ( ie. execute() ) ...
+
+    }
+}}}
