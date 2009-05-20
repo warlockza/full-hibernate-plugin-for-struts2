@@ -140,9 +140,9 @@ _Example:_
 
 Now, look to the result...
 
-[http://picasaweb.google.com.br/lh/photo/xgihwEDkXTpKm91OOkhHqw?feat=directlink Form before submit]
+[http://lh3.ggpht.com/_BudW2b3yOHU/ShP02Ub6vZI/AAAAAAAAABk/5JG8RA12hLI/formSoccerPlayersBeforeSubmit.JPG Form before submit]
 
-[http://picasaweb.google.com.br/lh/photo/7y5-P2HNQaQMT48y7puYyw?feat=directlink Form AFTER submit and validation]
+[http://lh6.ggpht.com/_BudW2b3yOHU/ShP02TyVExI/AAAAAAAAABo/gBOwfv5N7DE/formSoccerPlayersAfterSubmit.JPG Form AFTER submit and validation]
 
 Did you see that the validation message had the field label as prefix? This Plugin try to use a I18N key for this! How?
 If the Entity class reference at the Action is *player*, so the Value Stack keys for this will be:
@@ -155,4 +155,4 @@ If the Entity class reference at the Action is *player*, so the Value Stack keys
 *_So, there is another DRY pratice here!_* 
 
 If no key acording the Value Stack item name key found, the message WILL BE created BUT *without* the field label.
-The result would be *[http://picasaweb.google.com.br/lh/photo/87_afOW-3uq8CcK4_b53UA?feat=directlink this]*.
+The result would be *[http://lh6.ggpht.com/_BudW2b3yOHU/ShP3SEa-I-I/AAAAAAAAABs/95ofRnvpAnY/formSoccerPlayersAfterSubmitNoLabel.JPG this]*.
