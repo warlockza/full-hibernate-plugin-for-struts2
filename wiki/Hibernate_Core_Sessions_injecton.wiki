@@ -42,7 +42,7 @@ This properties are:
 
   * *hibernatePlugin.getSessionMethod*: Method used to get the Hibernate Session from the Session Factory class configured at <b>hibernatePlugin.customSessionFactoryClass</b>.
   Examples: <i>getSession</i>; <i>getHibernateSession</i>
-<br/><b>Optional</b>, but <b>Required</b> if <b>hibernatePlugin.customSessionFactoryClass</b> property is used.
+<b>Optional</b>, but <b>Required</b> if <b>hibernatePlugin.customSessionFactoryClass</b> property is used.
 
 
   * *hibernatePlugin.rebuildSessionFactoryMethod*: Public method from the Hibernate Session Factory class for rebuild configurations. <br/><b>Optional</b>, but <b>Required</b> if <b>hibernatePlugin.customSessionFactoryClass</b> property is used.
