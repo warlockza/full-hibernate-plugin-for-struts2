@@ -10,7 +10,7 @@ Annotations are a very convenient and elegant way to specify invariant constrain
 
 More at this framework at http://www.hibernate.org/412.html
 
-Hibernate Validator Manual:
+Hibernate Validator Manual:<br/>
 [http://www.hibernate.org/hib_docs/validator/reference/en/pdf/hibernate_validator.pdf PDF version]<br/>
 [http://www.hibernate.org/hib_docs/validator/reference/en/html_single/ HTML version]
 
@@ -51,9 +51,10 @@ _Example:_
         // ... getters and setters ...
     }
 }}}
+<font color="red">*=> _Validation annotations as need..._*</font>
 
 
-*Action class: Soccerplayer.java*
+*Action class: SoccerplayerAction.java*
 {{{
     public class ManagePlayersAction extends ActionSupport{
 	
@@ -64,16 +65,73 @@ _Example:_
 
     }
 }}}
+<font color="red">*=> _@Valid over the POJO to be validated..._*</font>
+
+*JSP file: form.jsp
+{{{
+    <%@ taglib uri="/struts-tags" prefix="s" %>
+
+    <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <s:head/>
+    <title>Soccer Players</title>
+    </head>
+    <body>	
+	<s:url id="urlList" action="listPlayer"></s:url>
+	<s:a theme="ajax" href="%{urlList}" targets="divIntern" indicator="indicator" showLoadingText="false">List All Players</s:a>
+
+	<s:form action="savePlayer">
+		<s:hidden name="player.idplayer"></s:hidden>
+		<s:textfield key="player.name"></s:textfield>
+		<s:textfield key="player.birthdate"></s:textfield>
+		<s:textfield key="player.height" value="%{getText('format.number',{player.height}).replace('null','')}" ></s:textfield>
+		<s:textarea key="player.notes" cols="50" rows="3"></s:textarea>
+		<s:select list="teamsList" name="player.soccerteam.idteam" label="Team"
+		 listKey="idteam" listValue="name"
+		 headerKey="" headerValue="- What Team? -"></s:select>
+		<s:submit value="Save" />
+	</s:form>
+
+    </body>
+    </html>
+}}}
+<font color="red">*=> _Input fields here use keys for the automatic generation of label and name attributes... but not just this..._*</font>
+
+
+*I18N messages file: SoccerplayerAction.properties
+{{{
+    player.name=Player Name
+    player.birthdate=Birth
+    player.height=Height (m)
+    player.notes=Notes about this Player
+    player.soccerteam.idteam=Team
+}}}
+<font color="red">*=> _Input fields here use keys for the automatic generation of label and name attributes... but not just this..._*</font>
 
 
 *Struts XML mapping file: struts.xml
 {{{
-    public class ManagePlayersAction extends ActionSupport{
-	
-	@Valid
-	Soccerplayer player = new Soccerplayer();
-    
-        // ... getters, setters and action methods ( ie. execute() ) ...
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "struts-2.0.dtd">
+    <struts>
 
-    }
+      <package name="main" extends="hibernate-default">
+    	<action name="listPlayer" method="list">
+    	    <result>/list.jsp</result>
+    	</action>
+    	
+    	<action name="savePlayer" method="save">
+    	    <interceptor-ref name="defaultStackHibernate"/>
+    	    <result name="input">/form.jsp</result>
+    	    <result type="redirect-action">listPlayer</result>
+    	</action>
+      </package>
+
+    </struts>
 }}}
