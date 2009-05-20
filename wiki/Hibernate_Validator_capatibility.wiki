@@ -15,6 +15,7 @@ Hibernate Validator Manual:<br/>
 [http://www.hibernate.org/hib_docs/validator/reference/en/html_single/ HTML version]
 
 
+<hr/>
 = Usage =
 
 This capability can be used to validate Entity class POJOs or simple fields in Actions. Like in Struts2 default validation methods, an *_input_* result is required when validation fails.
@@ -202,6 +203,7 @@ _Example:_
 In this Action, there are 3 fields, but just 2 will be validated in requests (if using the *defaultStackHibernate*).
 
 
+<hr/>
 = Details _(FAQ style)_ =
 
 *Q1: <font color="navy">My Entity class has 10 fields with Hibernate Validator annotations, but in a specific Action in my project i would like to submit and only 3 field of this class. What can i do?</font>*<br/>
