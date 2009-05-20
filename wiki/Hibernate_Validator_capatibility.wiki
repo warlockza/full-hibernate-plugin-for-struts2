@@ -1,4 +1,4 @@
-#summary Hibernate Validator capatibility
+#summary Hibernate Validator capability
 
 = Introduction =
 
@@ -54,6 +54,30 @@ _Example:_
 <font color="red">*=> _Validation annotations as need..._*</font>
 
 
+*Struts XML mapping file: struts.xml
+{{{
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "struts-2.0.dtd">
+    <struts>
+
+      <package name="main" extends="hibernate-default">
+    	<action name="listPlayer" class="SoccerplayerAction" method="list">
+    	    <result>/list.jsp</result>
+    	</action>
+    	
+    	<action name="savePlayer" class="SoccerplayerAction" method="save">
+    	    <interceptor-ref name="defaultStackHibernate"/>
+    	    <result name="input">/form.jsp</result>
+    	    <result type="redirect-action">listPlayer</result>
+    	</action>
+      </package>
+
+    </struts>
+}}}
+
+
 *Action class: SoccerplayerAction.java*
 {{{
     public class ManagePlayersAction extends ActionSupport{
@@ -88,7 +112,7 @@ _Example:_
 		<s:hidden name="player.idplayer"></s:hidden>
 		<s:textfield key="player.name"></s:textfield>
 		<s:textfield key="player.birthdate"></s:textfield>
-		<s:textfield key="player.height" value="%{getText('format.number',{player.height}).replace('null','')}" ></s:textfield>
+		<s:textfield key="player.height"></s:textfield>
 		<s:textarea key="player.notes" cols="50" rows="3"></s:textarea>
 		<s:select list="teamsList" name="player.soccerteam.idteam" label="Team"
 		 listKey="idteam" listValue="name"
@@ -99,7 +123,7 @@ _Example:_
     </body>
     </html>
 }}}
-<font color="red">*=> _Input fields here use keys for the automatic generation of label and name attributes... but not just this..._*</font>
+<font color="red">*=> _Input fields here use keys for the automatic generation of label and name attributes... but not just this: Please, pay attention to this keys..._*</font>
 
 
 *I18N messages file: SoccerplayerAction.properties
@@ -110,28 +134,25 @@ _Example:_
     player.notes=Notes about this Player
     player.soccerteam.idteam=Team
 }}}
-<font color="red">*=> _Input fields here use keys for the automatic generation of label and name attributes... but not just this..._*</font>
+<font color="red">*=> _Please, pay attention to this keys..._*</font>
 
+<font color="red">*=> _Ok, did you pay attention to the keys?_*</font>
 
-*Struts XML mapping file: struts.xml
-{{{
-    <?xml version="1.0" encoding="UTF-8" ?>
-    <!DOCTYPE struts PUBLIC
-    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
-    "struts-2.0.dtd">
-    <struts>
+Now, look to the result...
 
-      <package name="main" extends="hibernate-default">
-    	<action name="listPlayer" method="list">
-    	    <result>/list.jsp</result>
-    	</action>
-    	
-    	<action name="savePlayer" method="save">
-    	    <interceptor-ref name="defaultStackHibernate"/>
-    	    <result name="input">/form.jsp</result>
-    	    <result type="redirect-action">listPlayer</result>
-    	</action>
-      </package>
+[http://picasaweb.google.com.br/lh/photo/xgihwEDkXTpKm91OOkhHqw?feat=directlink Form before submit]
 
-    </struts>
-}}}
+[http://picasaweb.google.com.br/lh/photo/7y5-P2HNQaQMT48y7puYyw?feat=directlink Form AFTER submit and validation]
+
+Did you see that the validation message had the field label as prefix? This Plugin try to use a I18N key for this! How?
+If the Entity class reference at the Action is *player*, so the Value Stack keys for this will be:
+  * player.name
+  * player.birthdate
+  * player.height
+  * player.notes
+  * player.soccerteam.idteam
+
+*_So, there is another DRY pratice here!_* 
+
+If no key acording the Value Stack item name key found, the message WILL BE created BUT *without* the field label.
+The result would be *[http://picasaweb.google.com.br/lh/photo/87_afOW-3uq8CcK4_b53UA?feat=directlink this]*.
