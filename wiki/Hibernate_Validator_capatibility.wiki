@@ -140,9 +140,13 @@ _Example:_
 
 Now, look to the result...
 
-[http://lh3.ggpht.com/_BudW2b3yOHU/ShP02Ub6vZI/AAAAAAAAABk/5JG8RA12hLI/formSoccerPlayersBeforeSubmit.JPG Form before submit]
+Form before submit: <br/>
+<img src="http://lh3.ggpht.com/_BudW2b3yOHU/ShP02Ub6vZI/AAAAAAAAABk/5JG8RA12hLI/formSoccerPlayersBeforeSubmit.JPG" border="1"/>
 
-[http://lh6.ggpht.com/_BudW2b3yOHU/ShP02TyVExI/AAAAAAAAABo/gBOwfv5N7DE/formSoccerPlayersAfterSubmit.JPG Form AFTER submit and validation]
+<br/>
+
+Form AFTER submit and validation:<br/>
+<img src="http://lh6.ggpht.com/_BudW2b3yOHU/ShP02TyVExI/AAAAAAAAABo/gBOwfv5N7DE/formSoccerPlayersAfterSubmit.JPG" border=1/>
 
 Did you see that the validation message had the field label as prefix? This Plugin try to use a I18N key for this! How?
 If the Entity class reference at the Action is *player*, so the Value Stack keys for this will be:
@@ -155,4 +159,5 @@ If the Entity class reference at the Action is *player*, so the Value Stack keys
 *_So, there is another DRY pratice here!_* 
 
 If no key acording the Value Stack item name key found, the message WILL BE created BUT *without* the field label.
-The result would be *[http://lh6.ggpht.com/_BudW2b3yOHU/ShP3SEa-I-I/AAAAAAAAABs/95ofRnvpAnY/formSoccerPlayersAfterSubmitNoLabel.JPG this]*.
+The result would be this: <br/>
+<img src="http://lh6.ggpht.com/_BudW2b3yOHU/ShP3SEa-I-I/AAAAAAAAABs/95ofRnvpAnY/formSoccerPlayersAfterSubmitNoLabel.JPG" border=1/>
