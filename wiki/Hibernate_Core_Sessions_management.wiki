@@ -1,0 +1,31 @@
+#summary Hibernate Core Sessions injection.
+
+= Introduction =
+
+This feature provides an Interceptor that open and sets in the value stack a Hibernate Core Session and closes (or not) this after the results are rendered for the client.
+
+No code lines need to be added to manage Hibernate sessions in Struts 2 projects. Only some XML (or .properties) lines needed.
+
+This feature follows the concepts in http://www.hibernate.org/43.html
+
+*Important!* _*[http://code.google.com/p/hibernatesession-plugin-for-struts2/ hibernatesession-plugin-for-struts2]* users: You are strongly encouraged to migrate for this plugin!
+
+
+= Usage =
+
+If you want to use the Hibernate Core Sessions injection capability, your(s) package(s) <u>need</u> to extend the package _*hibernate-default*_.
+
+This plugin provides a mapping package called _*hibernate-default*_. And this has 3 interceptor stacks:
+
+    * *basicStackHibernate*: Like Struts2 basickStack (NO validations here!), but with Hibernate Core session and transaction injections capability. <br/><br/>
+    * *defaultStackHibernate*: Like Struts2 defaultStack, but DO NOT USE Struts2 validation methods (annotation and XML). Uses Hibernate Validation framework instead.<br/><br/>
+    * *defaultStackHibernateStrutsValidation*: Struts2 defaultStack + plugin basicStackHibernate. <br/><br/>
+
+This package extends the _*hibernate-default*_ package, so all default Struts2 configurations can be used if you need.
+
+_*hibernate-default*_ package is abstract, so you can extends this with other. Example:
+{{{
+  ...
+  <package name="principal" extends="hibernate-default,jasperreports-default,json-default" >
+  ...
+}}}
