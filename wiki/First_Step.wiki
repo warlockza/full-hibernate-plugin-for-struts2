@@ -1,0 +1,5 @@
+#summary First Step.
+
+= First Step =
+
+Your first step for using this plugin is to *[http://full-hibernate-plugin-for-struts2.googlecode.com/files/struts2-fullhibernatecore-plugin-1.0-Beta.jar download]* the library and put into your project classpath and in your WEB-INF/lib folder/WAR file distribuition.
