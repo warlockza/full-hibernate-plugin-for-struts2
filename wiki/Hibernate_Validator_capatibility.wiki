@@ -77,6 +77,8 @@ _Example:_
 
     </struts>
 }}}
+<font color="red">*=> _The package extends <u>hibernate-default</u>. This is REQUIRED!_*</font>. The default interceptor stack when you extends this package is *defaultStackHibernate*, that is the responsable by the validation.<br/>
+If you don't wanna use 
 
 
 *Action class: SoccerplayerAction.java*
@@ -162,6 +164,33 @@ If the Entity class reference at the Action is *player*, so the Value Stack keys
 If no key acording the Value Stack item name key found, the message WILL BE created BUT *without* the field label.
 The result would be this: <br/>
 <img src="http://lh6.ggpht.com/_BudW2b3yOHU/ShP3SEa-I-I/AAAAAAAAABs/95ofRnvpAnY/formSoccerPlayersAfterSubmitNoLabel.JPG" border=1/>
+
+
+
+==Validating Fields in the Action==
+
+You can validate simple fields in the Action using Hibernate Validator Annotations!
+
+_Example:_
+
+*Action class: MySimpleAction.java*
+{{{
+    public class MySimpleAction extends ActionSupport {
+
+        private Integer myFieldNotValidated;
+	
+	@NotEmpty
+	@Length(min=2, max=20)
+	private String myValidatedField1;
+	
+	@NotNull
+	@Past
+	private Date myValidatedField2;
+	
+        // ... getters and setters for this 3 fields ...
+    }
+}}}
+In this Action, there are 3 fields, but just 2 will be validated in requests using the *defaultStackHibernate*.
 
 
 = Details =
