@@ -55,7 +55,8 @@ _Example:_
     }
 }}}
 <font color="red">*=> _Validation annotations as need..._*</font><br/>
-*Important: *_You can use Hibernate Validator annotations when using XML mapping files and in JPA/EJB annotated Entity classes. In both cases this plugin works fine._
+*Important: *_You can use Hibernate Validator annotations when using XML mapping files and in JPA/EJB annotated Entity classes. In both cases this plugin works fine._ <br/>
+Note that there is no error message configured. What messages will be generated? Wait and continue reading this page...
 
 
 
@@ -150,7 +151,8 @@ In this Action, the *player* object will be validated in every request that use 
 Now, look to the result...
 
 Form before submit: <br/>
-<img src="http://lh3.ggpht.com/_BudW2b3yOHU/ShP02Ub6vZI/AAAAAAAAABk/5JG8RA12hLI/formSoccerPlayersBeforeSubmit.JPG" border="1"/>
+<img src="http://lh3.ggpht.com/_BudW2b3yOHU/ShP02Ub6vZI/AAAAAAAAABk/5JG8RA12hLI/formSoccerPlayersBeforeSubmit.JPG" border="1"/> <br/>
+The messages are provided by Hibernate Validator!
 
 <br/>
 
@@ -214,3 +216,27 @@ In this Action, there are 3 fields, but just 2 will be validated in requests (if
   * *basicStackHibernate*: Like Struts2 *basickStack* (NO validations here!), but with Hibernate Core session and transaction injections capability.<br/>
   * *defaultStackHibernate*: Like Struts2 *defaultStack*, but _DO NOT USE_ Struts2 validation methods (annotation and XML). Uses Hibernate Validation framework instead.<br/>
   * *defaultStackHibernateStrutsValidation*: Struts2 *defaultStack* + plugin *basicStackHibernate*.
+
+
+*Q4: <font color="navy">I or my clients don't speak english! How can I translate validation messages??</font>* <br/>
+*A4:* Peace of cake! This plugin access the default messages files from Hibernate Validator framework. Hibernate validator has messages in 13 languages (cs, da, de, en, es, fr, it, ja, nl, pt_BR, sv, zh_CN, zh_TW). But if you want to use custom messages, create a ValidatorMessages_??.properties in your default java package.
+
+
+*Q5: <font color="navy">Talking about messages... What about if i want to use a super custom validation message?</font>* <br/>
+*A5:* Just use the *message* attribute present in all Hibernate Validator annotations. ou can use a I18N key or a message directly.
+
+*Example:*
+{{{
+    public class MyBuduiaAction extends ActionSupport{
+	
+        // The plugin will look for a I18N key "error_field_not_empty_because_i_want".
+        // If not found, the message will be "error_field_not_empty_because_i_want", literally
+        @@NotEmpty(message="error_field_not_empty_because_i_want");
+	String myFieldValidateWithKey;
+ 	
+        // The plugin will use the message "Hey, guy... What about white some word here?"
+        @@NotEmpty(message="Hey, guy... What about white some word here?");
+	String myFieldValidateWithKey;     
+        // other methods...
+    }
+}}}
