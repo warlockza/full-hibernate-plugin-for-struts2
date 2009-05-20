@@ -1,0 +1,31 @@
+#summary Hibernate Core configuration management Web Tool
+
+= Introduction =
+
+This feature provides an WEB front-end tool for view and reload your Hibernate Core configurations.
+
+Yout can provide this tool in your context in a public way or protect this by 2 ways: IPs/Hosts list or HTTP Autentication.
+
+
+= Security Configurations =
+
+== IPs list ==
+
+Comma-separated IP numbers or host names that can access the Hibernate Manager Web Tool.
+This property is *Optional*. Default *127.0.0.1* (the famous _localhost_);
+
+<i>Examples: 10.1.0.3, localhost, admim.my.domain, pc1.my.domain </i>
+
+
+== HTTP Autentication Security ==
+
+Comma-separated roles that can access the Hibernate Manager Web Tool.
+<i>Example: manager, admin</i>
+This property is *Optional*.
+
+
+== Public Access ==
+
+If you want to allow public access to this tool, use the value *true* here.
+This property is *Optional*. Default *false*.
+  * Text in *bold* or _italic_
