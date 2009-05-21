@@ -225,7 +225,7 @@ In this Action, there are 3 fields, but just 2 will be validated in requests (if
 
 
 *Q5: <font color="navy">Talking about messages... What about if i want to use a super custom validation message?</font>* <br/>
-*A5:* Just use the *message* attribute present in all Hibernate Validator annotations. ou can use a I18N key or a message directly.
+*A5:* Just use the *message* attribute present in all Hibernate Validator annotations. You can use a I18N key or a message directly.
 
 *Example:*
 {{{
