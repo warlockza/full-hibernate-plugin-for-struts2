@@ -1,0 +1,5 @@
+#summary Installation.
+
+= Installation =
+
+*[http://full-hibernate-plugin-for-struts2.googlecode.com/files/struts2-fullhibernatecore-plugin-1.0-Beta.jar Download]*  the library and use in project classpath and in the WEB-INF/lib folder of your distribution. 
