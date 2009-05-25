@@ -1,5 +1,6 @@
 #summary Hibernate Core Sessions and Transactions injection capability.
 
+
 = Introduction =
 
 This feature provides an Interceptor that open and sets in the value stack a Hibernate Core Session and closes (or not) this after the results are rendered for the client. The same Interceptor opens and sets in the value stack a Transaction and commit this after the results are rendered for the client if a rollback method was not invoked. 
