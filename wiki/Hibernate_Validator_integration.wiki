@@ -103,7 +103,7 @@ Note that there is no error message configured. What messages will be generated?
     hibernatePlugin.transactionTarget=hibernateTransaction
 }}}
 Look: At *SoccerplayerAction.java* (next file) there are a Hibernate Session object (*hibernateSession*) and a Hibernate Transaction object (*hibernateTransaction*) with their Assessors methods (getters and setters). <br/>
-This example uses the plugin Hibernate Session Factory class, so just this 2 properties are need.
+This example uses the Hibernate Session Factory class from plugin, so just this 2 properties are need.
 <br/>See more details about *Hibernate Core Sessions and Transactions injection capability [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Core_Sessions_Transactions_injecton Here]*.
 
 
