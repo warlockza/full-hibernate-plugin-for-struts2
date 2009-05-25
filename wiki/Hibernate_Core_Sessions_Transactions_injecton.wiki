@@ -63,6 +63,7 @@ This properties are:
 
 If you do not use a custom class as a Hibernate Session Factory and don't wanna to disable auto close sessions function, you will need to use just <u>2</u> properties in your project:
 *hibernatePlugin.sessionTarget* and *hibernatePlugin.transactionTarget*.
+<br/>Look the example aplication [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Validator_integration *here*].
 
 
 <hr/>
