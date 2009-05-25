@@ -26,7 +26,7 @@ If you have an Entity class with specific validation annotations, just use the _
 _Example:_
 
 <hr/>
-*Entity class: Soccerplayer.java*
+<u>Entity class</u>: *Soccerplayer.java*
 {{{
     public class Soccerplayer implements java.io.Serializable {
 
@@ -60,7 +60,7 @@ Note that there is no error message configured. What messages will be generated?
 
 
 <hr/>
-*Struts XML mapping file: struts.xml
+<u>Struts XML mapping file</u>: *struts.xml*
 {{{
     <?xml version="1.0" encoding="UTF-8" ?>
     <!DOCTYPE struts PUBLIC
@@ -95,7 +95,7 @@ Note that there is no error message configured. What messages will be generated?
 
 
 <hr/>
-*Struts Properties file: struts.properties
+<u>Struts Properties file</u>: *struts.properties*
 {{{
     hibernatePlugin.sessionTarget=hibernateSession
     hibernatePlugin.transactionTarget=hibernateTransaction
@@ -106,7 +106,7 @@ This example uses the plugin Hibernate Session Factory class, so just this 2 pro
 
 
 <hr/>
-*Action class: SoccerplayerAction.java*
+<u>Action class</u>: *SoccerplayerAction.java*
 {{{
     public class ManagePlayersAction extends ActionSupport{
 	
@@ -126,7 +126,7 @@ In this Action, the *player* object will be validated in every request that use 
 
 
 <hr/>
-*JSP file: form.jsp
+<u>JSP file</u>: *form.jsp*
 {{{
     <%@ taglib uri="/struts-tags" prefix="s" %>
 
