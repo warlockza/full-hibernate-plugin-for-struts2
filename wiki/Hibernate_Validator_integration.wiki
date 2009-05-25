@@ -274,3 +274,7 @@ This resource can be used when validate simple fields (like the example above) o
 
 *Q6: <font color="navy">I'm using Hibernate Core with XMLs mapping files. If i use just Hibernate Validator annotations in my Entity classes, will the validation go on?</font>* <br/>
 *A6:* YES. In your Entity classes you can use just Hibernate Validator annotations or Hibernate Entity / EJB Annotations two.
+
+
+*Q7: <font color="navy">I have done every thing perfect! Why validations are not been done?!?</font>* <br/>
+*A7:* The actual version of this plugin can use the Hibernate Validator capability only in Actions that 'ISA' ActionSupport. Otherwise validation will be ignored!
