@@ -2,7 +2,7 @@
 
 === I was using the Hibernate Session Plugin. Do I need to migrate? ===
 
-The Hibernate Session Plugin will be depreated. Will not be continued. The Full Hibernate Plugin contain the the Hibernate Session injection feature and much more!
+The Hibernate Session Plugin will be depreated. Will not be continued. The Full Hibernate Plugin contain the the Hibernate Session injection feature and much more.
 
 
 === What version of Struts 2 can I use with this Plugin? ===
