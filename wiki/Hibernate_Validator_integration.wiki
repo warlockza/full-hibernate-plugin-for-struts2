@@ -202,7 +202,7 @@ The result would be this: <br/>
 
 
 
-==Validating Fields in the Action==
+==Validate Simple Fields in the Action==
 
 You can validate simple fields in the Action using Hibernate Validator Annotations!
 
