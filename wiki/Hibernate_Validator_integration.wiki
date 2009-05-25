@@ -68,22 +68,40 @@ Note that there is no error message configured. What messages will be generated?
     <struts>
 
       <package name="main" extends="hibernate-default">
-    	<action name="listPlayer" class="SoccerplayerAction" method="list">
-    	    <result>/list.jsp</result>
-    	</action>
-    	
-    	<action name="savePlayer" class="SoccerplayerAction" method="save">
-    	    <interceptor-ref name="defaultStackHibernate"/>
+    
+	<action name="savePlayer" class="SoccerplayerAction" method="save">
     	    <result name="input">/form.jsp</result>
     	    <result type="redirect-action">listPlayer</result>
     	</action>
+
+    	<action name="listPlayer" class="SoccerplayerAction" method="list">
+    	    <interceptor-ref name="basicStackHibernate"/>
+    	    <result>/list.jsp</result>
+    	</action>
+
+    	<action name="deletePlayer" class="SoccerplayerAction" method="delete">
+            <interceptor-ref name="basicStackHibernate"/>
+    	    <result>/list.jsp</result>
+    	</action>
+
       </package>
 
     </struts>
 }}}
 <font color="red">*=> _The package extends <u>hibernate-default</u>. This is REQUIRED!_*</font>. The default interceptor stack when you extends this package is *defaultStackHibernate*, that is the responsable by the validation.<br/>
-*Note that you have to create a <u>input</u> result (just like when using Struts2 default validation method).*
+*Note that you have to create a <u>input</u> result (just like when using Struts2 default validation method).* <br/>
+*listaPlayer* and *deletePlayer* mappings use *basicStackHibernate* interceptor because don't need validation but need Hibernate access (Session and/or Transaction). See more details about *Hibernate Core Sessions and Transactions injection capability [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Core_Sessions_Transactions_injecton Here]*.
 
+
+
+*Struts Properties file: struts.properties
+{{{
+    hibernatePlugin.sessionTarget=hibernateSession
+    hibernatePlugin.transactionTarget=hibernateTransaction
+}}}
+Look: At *SoccerplayerAction.java* (next file) there are a Hibernate Session object (*hibernateSession*) and a Hibernate Transaction object (*hibernateTransaction*) with their Assessors methods (getters and setters). <br/>
+This example uses the plugin Hibernate Session Factory class, so just this 2 properties are need.
+<br/>See more details about *Hibernate Core Sessions and Transactions injection capability [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Core_Sessions_Transactions_injecton Here]*.
 
 *Action class: SoccerplayerAction.java*
 {{{
@@ -91,6 +109,10 @@ Note that there is no error message configured. What messages will be generated?
 	
 	@Valid
 	Soccerplayer player = new Soccerplayer();
+        
+        org.hibernate.Session hibernateSession;
+
+        org.hibernate.Transaction hibernateTransaction;
     
         // ... getters, setters and action methods ( ie. execute() ) ...
 
