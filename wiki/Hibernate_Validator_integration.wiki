@@ -12,7 +12,6 @@ Hibernate Validator Manual:<br/>
 [http://www.hibernate.org/hib_docs/validator/reference/en/pdf/hibernate_validator.pdf PDF version]<br/>
 [http://www.hibernate.org/hib_docs/validator/reference/en/html_single/ HTML version]
 
-
 <hr/>
 = Usage =
 
