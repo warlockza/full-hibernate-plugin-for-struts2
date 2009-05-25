@@ -25,6 +25,7 @@ If you have an Entity class with specific validation annotations, just use the _
 
 _Example:_
 
+<hr/>
 *Entity class: Soccerplayer.java*
 {{{
     public class Soccerplayer implements java.io.Serializable {
@@ -58,7 +59,7 @@ _Example:_
 Note that there is no error message configured. What messages will be generated? Wait and continue reading this page...
 
 
-
+<hr/>
 *Struts XML mapping file: struts.xml
 {{{
     <?xml version="1.0" encoding="UTF-8" ?>
@@ -93,7 +94,7 @@ Note that there is no error message configured. What messages will be generated?
 *listaPlayer* and *deletePlayer* mappings use *basicStackHibernate* interceptor because don't need validation but need Hibernate access (Session and/or Transaction). See more details about *Hibernate Core Sessions and Transactions injection capability [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Core_Sessions_Transactions_injecton Here]*.
 
 
-
+<hr/>
 *Struts Properties file: struts.properties
 {{{
     hibernatePlugin.sessionTarget=hibernateSession
@@ -103,6 +104,8 @@ Look: At *SoccerplayerAction.java* (next file) there are a Hibernate Session obj
 This example uses the plugin Hibernate Session Factory class, so just this 2 properties are need.
 <br/>See more details about *Hibernate Core Sessions and Transactions injection capability [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Core_Sessions_Transactions_injecton Here]*.
 
+
+<hr/>
 *Action class: SoccerplayerAction.java*
 {{{
     public class ManagePlayersAction extends ActionSupport{
@@ -122,6 +125,7 @@ This example uses the plugin Hibernate Session Factory class, so just this 2 pro
 In this Action, the *player* object will be validated in every request that use the *defaultStackHibernate* (default interceptor stack if the package extends *hibernate-defaults*). If requests to this action that don't use this stack no hibernate validation will be done.
 
 
+<hr/>
 *JSP file: form.jsp
 {{{
     <%@ taglib uri="/struts-tags" prefix="s" %>
@@ -157,6 +161,7 @@ In this Action, the *player* object will be validated in every request that use 
 <font color="red">*=> _Input fields here use keys for the automatic generation of label and name attributes... but not just this: Please, pay attention to this keys..._*</font>
 
 
+<hr/>
 *I18N messages file: SoccerplayerAction.properties
 {{{
     player.name=Player Name
