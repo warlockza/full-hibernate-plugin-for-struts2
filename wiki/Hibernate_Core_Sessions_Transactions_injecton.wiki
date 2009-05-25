@@ -11,7 +11,6 @@ This feature follows the concepts in http://www.hibernate.org/43.html
 *Important!* _*[http://code.google.com/p/hibernatesession-plugin-for-struts2/ hibernatesession-plugin-for-struts2]* users: You are strongly encouraged to migrate for this plugin!
 
 
-
 <hr/>
 = Usage =
 
