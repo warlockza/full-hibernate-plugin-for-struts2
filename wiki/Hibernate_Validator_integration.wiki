@@ -16,6 +16,8 @@ Hibernate Validator Manual:<br/>
 <hr/>
 = Usage =
 
+At first, *[http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Installation install]* the plugin. <br/><br/>
+
 This capability can be used to validate Entity class POJOs or simple fields in Actions. Like in Struts2 default validation methods, an *_input_* result is required when validation fails.
 
 
