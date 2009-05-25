@@ -1,4 +1,5 @@
-#summary Installation
+#summary Installation.
+
 
 = Installation =
 
