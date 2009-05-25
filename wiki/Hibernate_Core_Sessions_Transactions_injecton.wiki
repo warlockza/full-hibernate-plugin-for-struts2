@@ -15,7 +15,7 @@ This feature follows the concepts in http://www.hibernate.org/43.html
 <hr/>
 = Usage =
 
-*[http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Installation Install]* the plugin. <br/><br/>
+At first, *[http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Installation install]* the plugin. <br/><br/>
 
 If you want to use the Hibernate Core Sessions and Transactions injection capability, your(s) package(s) <u>need</u> to extend the package _*hibernate-default*_.
 So, you have to use some coniguration properties in *struts.xml* or *struts.properties*.
