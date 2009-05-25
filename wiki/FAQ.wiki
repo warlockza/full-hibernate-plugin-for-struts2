@@ -1,0 +1,20 @@
+#summary Frequently Asked Questions.
+
+=== I was using the Hibernate Session Plugin. Need migration? ===
+
+The Hibernate Session Plugin will be depreated. Will not be continued. This plugin contain the the Hibernate Session injection feature and much more!
+
+
+=== What version of Struts 2 can i use with this Plugin? ===
+
+From Struts 2.0.9+ to 2.1.x.
+
+
+=== Can i use this plugin with Struts 2.0.x Code Behind Plugin? ===
+
+Not tested.
+
+
+=== Can i use this plugin with Struts 2.1.x Convention Plugin? ===
+
+Yes. This plugin works fine with XML and Annotation mappings.
