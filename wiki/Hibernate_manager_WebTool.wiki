@@ -11,7 +11,7 @@ Yout can provide this tool in your context in a public way or protect this by 2 
 
 At first, *[http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Installation install]* the plugin. <br/><br/>
 
-To access the Web Tool, use the *_/<your_context>/hibernateManager/index.action_* url.
+To access the Web Tool, use the *_/your_context/hibernateManager/index.action_* url.
 
 <hr/>
 ==Screenshots==
