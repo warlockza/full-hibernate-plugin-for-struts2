@@ -18,3 +18,5 @@ Not tested. Feedback is appreciated.
 === Can I use this plugin with Struts 2.1.x Convention Plugin? ===
 
 Yes. This plugin works fine with XML and Annotation (from Convention Plugin) mappings.
+
+<hr/>
