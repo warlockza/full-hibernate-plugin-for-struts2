@@ -4,6 +4,20 @@
 
 The Hibernate Session Plugin will be depreated. Will not be continued. The Full Hibernate Plugin contain the the Hibernate Session injection feature and much more.
 
+=== I want to use only Session and Transaction injection features but not the Hibernate Validator feature. Can I do it? ===
+
+Yes. The are 3 ways:
+
+1. Using the *basicStackHibernate* interceptor stack (Struts2 basickStack + Session and Transaction injection)
+
+2. Using the *defaultStackHibernateStrutsValidation* (Struts2 defaultStack + Session and Transaction injection)
+
+3. Using the *com.googlecode.s2hibernate.struts2.plugin.s2hibernatesession.HibernateSessionInterceptor* class as an Interceptor in a custom Interceptors Stack.
+
+=== I want to use Hibernate Validator feature, but not Session and Transaction injection features. Can I do it? ===
+
+Yes. Use the *com.googlecode.s2hibernate.struts2.plugin.s2hibernatevalidator.interceptor.HibernateValidatorInterceptor* class as an Interceptor in a custom Interceptors Stack and DO NOT USE *basicStackHibernate*, *defaultStackHibernate* and *defaultStackHibernateStrutsValidation* stacks.
+
 
 === What version of Struts 2 can I use with this Plugin? ===
 
