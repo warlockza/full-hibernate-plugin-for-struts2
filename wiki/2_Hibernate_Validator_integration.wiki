@@ -131,6 +131,15 @@ This example uses the Hibernate Session Factory class from plugin, so just this 
 }}}
 <font color="red">*=> _@Valid over the POJO to be validated..._*</font>
 In this Action, the *player* object will be validated in every request that use the *defaultStackHibernate* (default interceptor stack if the package extends *hibernate-defaults*). If requests to this action that don't use this stack no hibernate validation will be done.
+This Action could be used with annotations for Session and Transaction. Like this
+{{{
+     @SessionTarget
+     org.hibernate.Session hibernateSession;
+
+     @TransactionTarget
+     org.hibernate.Transaction hibernateTransaction;
+}}}
+In this case, *hibernatePlugin.sessionTarget* and *hibernatePlugin.transactionTarget* properties at *struts.properties* would not be necessary.<br/>
 
 
 <hr/>
