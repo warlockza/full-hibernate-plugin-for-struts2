@@ -18,19 +18,19 @@ This feature follows the concepts in http://www.hibernate.org/43.html
 At first, *[http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Installation install]* the plugin. <br/><br/>
 
 If you want to use the Hibernate Core Sessions and Transactions injection capability, your(s) package(s) <u>need</u> to extend the package _*hibernate-default*_.
-So, you have to use some coniguration properties in *struts.xml* or *struts.properties*.
+So, you have to use some configuration properties in *struts.xml* or *struts.properties*.
 This properties are:
 
   * *hibernatePlugin.sessionTarget*: Hibernate Session Target in the Action ValueStack. This property can be used in 2 ways:
     # Simple values. Examples: myHibSession; hibSession; myDao.session
     # Values using Wildcard. Examples: *Dao.session; *Facade.hibernateSession
-  This property is *REQUIRED*.<hr/>
+  This property is *Optional*.<hr/>
 
 
   * *hibernatePlugin.transactionTarget*: Hibernate Transaction Target in the Action ValueStack. This property can be used in 2 ways:
     # Simple values. Examples: myHibTransaction; hibernateTransaction; myDao.transaction
     # Values using Wildcard. Examples: *Dao.transaction; *Facade.hibernateTransaction
-  This property is *REQUIRED*.<hr/>
+  This property is *Optional*.<hr/>
 
 
   * *hibernatePlugin.configurationFiles*:  Comma-separated Hibernate Configuration file names. Note that if <b>hibernatePlugin.customSessionFactoryClass</b> property is used that is not guarantee about the using of the files named here.<br/>
@@ -63,10 +63,19 @@ This properties are:
 
 ==Easiest configuration==
 
-If you do not use a custom class as a Hibernate Session Factory and don't wanna to disable auto close sessions function, you will need to use just <u>2</u> properties in your project:
+If you do not use a custom class as a Hibernate Session Factory and don't want to disable auto close sessions function, you will need to use just <u>2</u> properties in your project:
 *hibernatePlugin.sessionTarget* and *hibernatePlugin.transactionTarget*.
 <br/>Look an example *[http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Validator_integration here]*.
+Instead, you can use the *Annotations configuration*.
 
+
+==Annotations configuration==
+
+You can use annotations over your *session* and *transaction* objects:<br/>
+*@SessionTarget* (for Hibernate Session objects)<br/>
+*@TransactionTarget* (for Transaction objects)<br/>
+This feature can be used with the *hibernatePlugin.sessionTarget* and *hibernatePlugin.transactionTarget* configuration properties. If both are used (annotations and properties), both will be used by the plugin.
+<br/>Look an example *[http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Validator_integration here]*.
 
 <hr/>
 = More details about "hibernate-default" package =
