@@ -74,7 +74,8 @@ Instead, you can use the *Annotations configuration*.
 You can use annotations over your *session* and *transaction* objects:<br/>
 *@SessionTarget* (for Hibernate Session objects)<br/>
 *@TransactionTarget* (for Transaction objects)<br/>
-This feature can be used with the *hibernatePlugin.sessionTarget* and *hibernatePlugin.transactionTarget* configuration properties. If both are used (annotations and properties), both will be used by the plugin.
+This feature can be used with the *hibernatePlugin.sessionTarget* and *hibernatePlugin.transactionTarget* configuration properties. If both are used (annotations and properties), both will be used by the plugin.><br/>
+This annotations can be used in Actions or in any class in your project (DAOs, Facades...).
 <br/>Look an example *[http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Validator_integration here]*.
 
 <hr/>
