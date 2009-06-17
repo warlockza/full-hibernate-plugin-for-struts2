@@ -14,7 +14,7 @@ Yes. The are 4 ways:
 
 3. Using the *com.googlecode.s2hibernate.struts2.plugin.interceptors.SessionTransactionInjectorInterceptor* class as an Interceptor in a custom Interceptors Stack.
 
-4. Do not use the @Valid annotation over the Entity POJO reference in the Action
+4. Do not use the *@Valid* annotation over the Entity POJO declaration in the Action
 
 === 3. I want to use Hibernate Validator feature, but not Session and Transaction injection features. Can I do it? ===
 
