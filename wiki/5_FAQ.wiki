@@ -12,7 +12,7 @@ Yes. The are 3 ways:
 
 2. Using the *defaultStackHibernateStrutsValidation* (Struts2 defaultStack + Session and Transaction injection)
 
-3. Using the *com.googlecode.s2hibernate.struts2.plugin.s2hibernatesession.HibernateSessionInterceptor* class as an Interceptor in a custom Interceptors Stack.
+3. Using the *com.googlecode.s2hibernate.struts2.plugin.interceptors* class as an Interceptor in a custom Interceptors Stack.
 
 === I want to use Hibernate Validator feature, but not Session and Transaction injection features. Can I do it? ===
 
