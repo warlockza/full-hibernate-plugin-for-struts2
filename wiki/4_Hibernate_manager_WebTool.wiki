@@ -31,6 +31,7 @@ To access the Web Tool, use the url *_/your_context/hibernateManager/index.actio
 
 == IPs list ==
 
+Configuration property: *hibernatePlugin.manager.validIpsHosts*<br/>
 Comma-separated IP numbers or host names that can access the Hibernate Manager Web Tool.
 This property is *Optional*. Default *127.0.0.1* (the famous _localhost_);
 
@@ -39,6 +40,7 @@ This property is *Optional*. Default *127.0.0.1* (the famous _localhost_);
 
 == HTTP Autentication Security ==
 
+Configuration property: *hibernatePlugin.manager.httpAuhtRoles*<br/>
 Comma-separated roles that can access the Hibernate Manager Web Tool.
 <i>Example: manager, admin</i>
 This property is *Optional*.
@@ -46,6 +48,7 @@ This property is *Optional*.
 
 == Public Access ==
 
+Configuration property: *hibernatePlugin.manager.publicAccessEnabled*<br/>
 If you want to allow public access to this tool, use the value *true* here.
 This property is *Optional*. Default *false*.
 
