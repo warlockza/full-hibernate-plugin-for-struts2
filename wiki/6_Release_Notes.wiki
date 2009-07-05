@@ -1,13 +1,5 @@
 #summary Release Notes
 
-== Version 1.0 GA (_11 jun 2009_)==
-
-
-  * _New Feature_: Hibernate Core Session injection by annotation
-  * _New Feature_: Transaction injection by annotation
-  * _Class change_: The *com.googlecode.s2hibernate.struts2.plugin.s2hibernatesession.HibernateSessionInterceptor* in 1.0 Beta version now is *com.googlecode.s2hibernate.struts2.plugin.interceptors.SessionTransactionInjectorInterceptor*
-
-
 == Version 1.1 GA (_05 jul 2009_)==
 
 
@@ -15,3 +7,11 @@
   * _New Feature_: Close session method can be configured for custom Session Factory class
   * _Bug Fix_: Bux fix for Oracle, MS SQL Server and Firebird/Interbase (test the connection availability) - thanks to _Nacho Marijuan_
   * Better Hibernate Core Session Factory, using the Thread Local Pattern (https://www.hibernate.org/207.html)
+
+
+== Version 1.0 GA (_11 jun 2009_)==
+
+
+  * _New Feature_: Hibernate Core Session injection by annotation
+  * _New Feature_: Transaction injection by annotation
+  * _Class change_: The *com.googlecode.s2hibernate.struts2.plugin.s2hibernatesession.HibernateSessionInterceptor* in 1.0 Beta version now is *com.googlecode.s2hibernate.struts2.plugin.interceptors.SessionTransactionInjectorInterceptor*
