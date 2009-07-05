@@ -147,6 +147,7 @@ This Action could be used with annotations for Session and Transaction. Like thi
      ...
 }}}
 In this case, *hibernatePlugin.sessionTarget* and *hibernatePlugin.transactionTarget* properties at *struts.properties* would not be necessary.<br/>
+*Version 1.1+*: Setters are not required for this fields (EJB3 like), but if you create this in Java Bean default, will be used.<br/>
 
 
 <hr/>
