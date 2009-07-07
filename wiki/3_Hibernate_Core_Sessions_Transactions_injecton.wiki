@@ -63,7 +63,7 @@ This properties are:
 
 
   * *hibernatePlugin.useSessionObjectInCloseSessionMethod* (version 1.1+): Indicates the use of the Hibernate Session Object as parameter in close session method at the Session Factory class configured at <b>hibernatePlugin.customSessionFactoryClass</b>.
-  <br/>Use <code>true</code> or <code>false</code> 
+  <br/>Use *true* or *false*
   <br/><b>Optional</b>.
   <br/>Default <b>true</b>.
 
