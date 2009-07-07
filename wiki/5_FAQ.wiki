@@ -34,3 +34,8 @@ Not tested. Feedback is appreciated.
 === 6. Can I use this plugin with Struts 2.1.x Convention Plugin? ===
 
 Yes. This plugin works fine with XML and Annotation (from Convention Plugin) mappings.
+
+
+=== 7. I did every thing right! But the Session/Transaction injection do not goes! What is the problem? ===
+
+All the [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/7_Dependencies Dependencies] must be configured.
