@@ -1,5 +1,12 @@
 #summary Release Notes
 
+== Version 1.2 GA (_07 jul 2009_)==
+
+
+  * _New Feature_: Auto detect Hibernate Configuration Type. The Plugin detects if your project uses XML or Annotations mapping. *hibernatePlugin.configurationType* property is Deprecated. Not necessary from this version on.
+  * _Bug Fix_: When the tag _<s:action_ used with the attribute _executeResult="true"_ a NullPointerExpection is throwed.
+
+
 == Version 1.1 GA (_05 jul 2009_)==
 
 
