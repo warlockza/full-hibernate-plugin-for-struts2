@@ -15,7 +15,7 @@
   * For Hibernate Core 3.2.x: add *slf4j-log4j12.jar*
 
 
-*Struts 2.0.9+ or 2.1.6*
+*Struts 2.0.9+* or *2.1.6*
 
 
 *Commons collections 3.1+*
