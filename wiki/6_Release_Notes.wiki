@@ -5,6 +5,7 @@
 
   * _New Feature_: Auto detect Hibernate Mapping Type. The Plugin detects if your project uses XML or Annotations mapping. *hibernatePlugin.configurationType* property is Deprecated. Not necessary from this version on.
   * _Bug Fix_: When the tag _<s:action_ used with the attribute _executeResult="true"_ a NullPointerExpection is throwed.
+  * _Bug Fix_: Session and Transaction objects can be in superclasses (ie. a "GenericDAO") when using annotations
 
 
 == Version 1.1 GA (_05 jul 2009_)==
