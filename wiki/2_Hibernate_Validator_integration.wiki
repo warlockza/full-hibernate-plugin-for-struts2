@@ -99,7 +99,7 @@ Note that there is no error message configured. What messages will be generated?
 }}}
 <font color="red">*=> _The package extends <u>hibernate-default</u>. This is REQUIRED!_*</font>. The default interceptor stack when you extends this package is *defaultStackHibernate*, that is the responsable by the validation.<br/>
 *Note that you have to create a <u>input</u> result (just like when using Struts2 default validation method).* <br/>
-*listaPlayer* and *deletePlayer* mappings use *basicStackHibernate* interceptor because don't need validation but need Hibernate access (Session and/or Transaction). See more details about *Hibernate Core Sessions and Transactions injection capability [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Core_Sessions_Transactions_injecton Here]*.
+*listPlayer* and *deletePlayer* mappings use *basicStackHibernate* interceptor because don't need validation but need Hibernate access (Session and/or Transaction). See more details about *Hibernate Core Sessions and Transactions injection capability [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/Hibernate_Core_Sessions_Transactions_injecton Here]*.
 
 
 <hr/>
