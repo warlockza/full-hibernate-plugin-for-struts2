@@ -109,3 +109,16 @@ _*hibernate-default*_ package is abstract, so you can extends this with other. E
   <package name="principal" extends="hibernate-default,jasperreports-default,json-default" >
   ...
 }}}
+
+
+<hr/>
+= The Hibernate Core Session Factory =
+
+This plugin provides a powerfull Hibernate Core Session Factory class. <br/>
+The class is *com.googlecode.s2hibernate.struts2.plugin.util.HibernateSessionFactory*. <br/>
+If you <u>do not</u> configure a <u>custom</u> Hibernate Core Session Factory class, you can use this methods:
+ * *Get the current thread's Hibernate Core Session*: Method *getSession()*<br/>
+ * *Close the current thread's Hibernate Core Session*: Method *closeSession()*<br/>
+ * *Get an "isolated" Hibernate Core Session*: Method *getNewSession()*<br/>
+ * *Reload the session factory configurations according the configuration files*: *rebuildSessionFactory()*
+ * *Destroy Session Factory* (In Web Applications with Hibernate, when the context is reload, it's necessary to destroy the session factory to evict problems with connection pools like C3P0): *destroyFactory()*
