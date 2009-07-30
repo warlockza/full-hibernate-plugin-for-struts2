@@ -39,3 +39,9 @@ Yes. This plugin works fine with XML and Annotation (from Convention Plugin) map
 === 7. I did every thing right! But the Session/Transaction injection do not goes! What is the problem? ===
 
 All the [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/7_Dependencies Dependencies] must be configured.
+
+
+=== 8. The Session/Transaction injection is Ok in my Actions and this fields. How can I access the injected Session in other class (ie. a custom Interceptor)? ===
+If you want to use the same instance of the Session that was used in the Action, use:
+com.googlecode.s2hibernate.struts2.plugin.util.HibernateSessionFactory.getSession();
+This is the internal Hibernate Session Factory of the plugim that uses the local thread pattern.
