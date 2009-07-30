@@ -117,8 +117,8 @@ _*hibernate-default*_ package is abstract, so you can extends this with other. E
 This plugin provides a powerfull Hibernate Core Session Factory class. <br/>
 The class is *com.googlecode.s2hibernate.struts2.plugin.util.HibernateSessionFactory*. <br/>
 If you <u>do not</u> configure a <u>custom</u> Hibernate Core Session Factory class, you can use this methods:
- * *Get the current thread's Hibernate Core Session*: Method *getSession()*<br/><br/>
- * *Close the current thread's Hibernate Core Session*: Method *closeSession()*<br/><br/>
- * *Get an "isolated" Hibernate Core Session*: Method *getNewSession()*<br/><br/>
- * *Reload the session factory configurations according the configuration files*: *rebuildSessionFactory()*<br/><br/>
- * *Destroy Session Factory* (In Web Applications with Hibernate, when the context is reload, it's necessary to destroy the session factory to evict problems with connection pools like C3P0): *destroyFactory()*
+ * *getSession()*: Get the current thread's Hibernate Core Session<br/><br/>
+ * *closeSession()*: Close the current thread's Hibernate Core Session<br/><br/>
+ * *getNewSession()*: Get an "isolated" Hibernate Core Session<br/><br/>
+ * *rebuildSessionFactory()*: Reload the session factory configurations according the configuration files<br/><br/>
+ * *destroyFactory()*: Destroy Session Factory. _In Web Applications with Hibernate, when the context is reload, it's necessary to destroy the session factory to evict problems with connection pools like C3P0_.
