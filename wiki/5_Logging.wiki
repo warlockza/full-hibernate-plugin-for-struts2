@@ -1,4 +1,4 @@
-#Config log messages
+#summary Config log messages
 
 = Usage =
 
