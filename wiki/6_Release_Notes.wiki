@@ -1,5 +1,18 @@
 #summary Release Notes
 
+== Version 2.0 Beta (_21 oct 2009_)==
+
+
+  * _Bug fix_: Debug messages from plugin's Intercetors not displayed.
+  * _New Feature_: The Plugin's Hibernate Session Factory now can work with multiple database servers simultaneity (multiple Session Factories)
+  * _New Feature_: Dynamic search and configuration of Hibernate properties files (multiple Hibernate properties files allowed) 
+  * _New Feature_: Auto Rebuild SessionFactories when an org.hibernate.exception.JDBCConnectionException occurs
+  * _New Feature_: Spanish messages (Thanks to Nacho Marijuan).
+  * _Improvement_: Faster algorithm for Session/Transaction Injection.
+  * _Improvement_: More and Betters debug messages.
+
+
+
 == Version 1.5 GA (_27 aug 2009_)==
 
 
