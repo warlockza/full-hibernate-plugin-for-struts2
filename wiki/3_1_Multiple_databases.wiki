@@ -73,11 +73,11 @@ Transaction:
 
 Hibernate Core Session:
 {{{
-  @SessionTarget("sfMySql")
+  @SessionTarget("sfMySql") // the same of the *name* attribute of tag *<session-factory>* from the hibernate configuration file
   org.hibernate.Session session1;
 
 
-  @SessionTarget("sfPostgres")
+  @SessionTarget("sfPostgres") // the same of the *name* attribute of tag *<session-factory>* from the hibernate configuration file
   org.hibernate.Session session2;
 }}}
 
@@ -92,4 +92,8 @@ Transaction:
 }}}
 
 
-<font color=red>*Note: *</font> The Full Hibernate Plugin's Session Factory Class sets the SessionFactory from the first configuration file as the default. So,
+<font color=red>*Note: *</font> The Full Hibernate Plugin's Session Factory Class sets the SessionFactory from the first configuration file as the default. So, in the example, the *sfMySql* would be the default. So, for inject a Session from this SessionFactory we should do just
+{{{
+  @SessionTarget // the *sfMySql* will be used
+  org.hibernate.Session session1;
+}}}
