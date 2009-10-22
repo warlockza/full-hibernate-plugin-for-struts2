@@ -84,16 +84,31 @@ Hibernate Core Session:
 Transaction:
 {{{
   @TransactionTarget("session1") // this transaction will be retrieved from *session1* object in the same class
-  org.hibernate.Transaction1;
+  org.hibernate.Transaction1 transaction1;
 
 
   @TransactionTarget("session2") // this transaction will be retrieved from *session2* object in the same class
-  org.hibernate.Transaction2;
+  org.hibernate.Transaction2 transaction2;
 }}}
 
 
-<font color=red>*Note: *</font> The Full Hibernate Plugin's Session Factory Class sets the SessionFactory from the first configuration file as the default. So, in the example, the *sfMySql* would be the default. So, for inject a Session from this SessionFactory we should do just
+<font color=red>*Note: *</font> The Full Hibernate Plugin's Session Factory Class sets the SessionFactory from the first configuration file as the default. So, in the example, the *sfMySql* would be the default. So, for inject a Session from this SessionFactory we should do just...
 {{{
   @SessionTarget // the *sfMySql* will be used
   org.hibernate.Session session1;
+}}}
+
+
+<font color=red>*Note2: *</font> If just one Session object is setted at the @TransactionTarget, the first Session object found in the classe will be used. So...
+
+{{{
+  @SessionTarget("sfMySql") 
+  org.hibernate.Session sessionA;
+
+
+  @SessionTarget("sfPostgres")
+  org.hibernate.Session sessionB;
+
+  @TransactionTarget // this transaction will be retrieved from *sessionA* object
+  org.hibernate.Transaction2 transaction;
 }}}
