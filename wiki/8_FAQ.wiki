@@ -46,3 +46,7 @@ If you want to use the same instance of the Session that was used in the Action,
 *com.googlecode.s2hibernate.struts2.plugin.util.HibernateSessionFactory.getSession()*
 This is the internal Hibernate Session Factory of the plugim that uses the local thread pattern.<br/>
 If you want an "isolated" Session , since *1.4* version, the *com.googlecode.s2hibernate.struts2.plugin.util.HibernateSessionFactory* has the *getNewSession()* method, that returns a new Hibernate Core Session, NOT the Session of the current thread.
+
+=== 9. I was using the 1.5 version. From 2.0 on there is possible to use multiple databases. Do I need to change all my configurations? ===
+
+No. The annotations and XML parameters are the same. If you are using a single database at your project, no change is need.
