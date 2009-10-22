@@ -21,14 +21,14 @@ If you want to use the Hibernate Core Sessions and Transactions injection capabi
 So, you have to use some configuration properties in *struts.xml* or *struts.properties*.
 This properties are:
 
-  * *hibernatePlugin.sessionTarget*: Hibernate Session Target in the Action ValueStack. This property can be used in 2 ways:
-    # Simple values. Examples: myHibSession; hibSession; myDao.session
+  * *hibernatePlugin.sessionTarget*: Comma-separated Hibernate Session Target in the Action ValueStack. This property can be used in 2 ways:
+    # Simple values. Examples: myHibSession, myHibSession2; hibSession; myDao.session, myDao2.session
     # Values using Wildcard. Examples: *Dao.session; *Facade.hibernateSession
   This property is *Optional*.<hr/>
 
 
-  * *hibernatePlugin.transactionTarget*: Hibernate Transaction Target in the Action ValueStack. This property can be used in 2 ways:
-    # Simple values. Examples: myHibTransaction; hibernateTransaction; myDao.transaction
+  * *hibernatePlugin.transactionTarget*: Comma-separated Hibernate Transaction Target in the Action ValueStack. This property can be used in 2 ways:
+    # Simple values. Examples: myHibTransaction, myHibTransaction2; hibernateTransaction; myDao.transaction, myDao2.transaction
     # Values using Wildcard. Examples: *Dao.transaction; *Facade.hibernateTransaction
   This property is *Optional*.<hr/>
 
@@ -36,6 +36,8 @@ This properties are:
   * *hibernatePlugin.configurationFiles*:  Comma-separated Hibernate Configuration file names. Note that if <b>hibernatePlugin.customSessionFactoryClass</b> property is used that is not guarantee about the using of the files named here.<br/>
   This property is *Optional*. Default <b>/hibernate.cfg.xml</b>.<hr/>
 
+  * *hibernatePlugin.autoRebuild* (*Since 1.2*): Define if the Full Hibernate Plugin's Session Factory will rebuild all configured SessionFactories when an org.hibernate.exception.JDBCConnectionException is thrown. Use *true* or *false*<br/>
+  This property is *Optional*. Default <b>true</b>.<hr/>
 
   * *hibernatePlugin.configurationType* (*Deprecated since 1.2*): Hibernate Configuration Type. Values: <b>xml</b> or <b>annotation</b>. <br/>Note that if <b>hibernatePlugin.customSessionFactoryClass</b> property is used that is not guarantee about the using of the configuration type named here. <br/>This property is *Optional*. Default <b>xml</b>. <hr/>
 
@@ -122,3 +124,4 @@ If you <u>do not</u> configure a <u>custom</u> Hibernate Core Session Factory cl
  * *getNewSession()*: Get an "isolated" Hibernate Core Session<br/><br/>
  * *rebuildSessionFactory()*: Reload the session factory configurations according the configuration files<br/><br/>
  * *destroyFactory()*: Destroy Session Factory. _In Web Applications with Hibernate, when the context is reload, it's necessary to destroy the session factory to evict problems with connection pools like C3P0_.
+ * *getSessionFactory(String sessionFactoryName)*: Returns one of the configured SessionFactories (since version 2.0)
