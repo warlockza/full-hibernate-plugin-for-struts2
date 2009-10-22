@@ -49,7 +49,7 @@
 
 *struts.xml*
 {{{
- <constant name="hibernatePlugin.configurationFiles" value="=/pkc1/hibConfigs/hibernate.mysql.cfg.xml,/pkc1/hibConfigs/hibernate.postgres.cfg.xml"></constant>
+ <constant name="hibernatePlugin.configurationFiles" value="/pkc1/hibConfigs/hibernate.mysql.cfg.xml,/pkc1/hibConfigs/hibernate.postgres.cfg.xml"></constant>
 }}}
 
 = Using annotations =
