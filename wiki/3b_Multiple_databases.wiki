@@ -4,7 +4,7 @@
 
 == Hibernate configuration file #1 ==
 *Name: * hibernate.mysql.cfg.xml <br/>
-*Package: * com.hibConfigs <br/>
+*Package: * pkc1.hibConfigs <br/>
 *Content*:<br/>
 {{{
 <hibernate-configuration>
@@ -24,7 +24,7 @@
 
 == Hibernate configuration file #2 ==
 *Name: * hibernate.postgres.cfg.xml <br/>
-*Package: * com.hibConfigs <br/>
+*Package: * pkc1.hibConfigs <br/>
 *Content*:<br/>
 {{{
 <hibernate-configuration>
@@ -44,7 +44,7 @@
 *Configuring these two classes:*<br/>
 *struts.propeties*
 {{{
- hibernatePlugin.configurationFiles=/com/hibConfigs/hibernate.mysql.cfg.xml,/com/hibConfigs/hibernate.postgres.cfg.xml
+ hibernatePlugin.configurationFiles=/pkc1/hibConfigs/hibernate.mysql.cfg.xml,/pkc1/hibConfigs/hibernate.postgres.cfg.xml
 }}}
 
 *struts.xml*
