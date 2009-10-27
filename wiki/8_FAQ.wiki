@@ -50,3 +50,7 @@ If you want an "isolated" Session , since *1.4* version, the *com.googlecode.s2h
 === 9. I was using the 1.5 version. From 2.0 on there is possible to use multiple databases. Do I need to change all my configurations? ===
 
 No. The annotations and XML parameters are the same. If you are using a single database at your project, no change is need.
+
+=== 10. Is this required to configure a Hibernate Transaction by XML or Annotation? ===
+
+No. You can configure only Hibernate Core Sessions if you prefer.
