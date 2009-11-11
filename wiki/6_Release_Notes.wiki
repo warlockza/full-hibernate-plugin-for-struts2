@@ -16,7 +16,7 @@
 == Version 1.5 GA (_27 aug 2009_)==
 
 
-  * _Improvement_: Objects with Session and Transaction targets (ie. DAOs) can be constructed inside Action methods.
+  * _Improvement_: Objects with Session and Transaction targets (ie. DAOs) can be instantiated inside Action methods.
   * _Improvement_: Better log messages for debugging.
   * _New Feature_: German messages (Thanks to Johannes Geppert).
 
