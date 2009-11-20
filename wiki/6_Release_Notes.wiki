@@ -5,7 +5,8 @@
 
 
   * _Bug fix_: <a href="http://code.google.com/p/full-hibernate-plugin-for-struts2/issues/detail?id=4&can=1">Issue 4</a> fixed.
-  * _Bug fix_: <a href="http://code.google.com/p/full-hibernate-plugin-for-struts2/issues/detail?id=4&can=1">Issue 5</a> fixed.
+  * _Bug fix_: <a href="http://code.google.com/p/full-hibernate-plugin-for-struts2/issues/detail?id=5&can=1">Issue 5</a> fixed.
+  * _Bug fix_: <a href="http://code.google.com/p/full-hibernate-plugin-for-struts2/issues/detail?id=6&can=1">Issue 6</a> fixed.
   * _Improvement_: *C3P0* Pooled Datasources are closed and destroyed when *destroyFactory()* method is invoked from *com.googlecode.s2hibernate.struts2.plugin.util.HibernateSessionFactory*
 
 
