@@ -50,7 +50,7 @@ This property is *Optional*.
 
 Configuration property: *hibernatePlugin.manager.publicAccessEnabled*<br/>
 If you want to allow public access to this tool, use the value *true* here.
-This property is *Optional*. Default *true*.
+This property is *Optional*. Default *false*.
 
 
 <hr/>
