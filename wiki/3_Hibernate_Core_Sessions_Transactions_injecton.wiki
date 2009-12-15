@@ -77,6 +77,11 @@ This properties are:
   * *hibernatePlugin.closeSessionAfterInvoke*:If <b>true</b>, the Hibernate Session of the request will be closed after the response. <br/>If <b>false</b>, the Hibernate Session of the request WILL NOT be closed after the response. <br/><b>Optional</b>. Default <b>true</b>.<hr/>
 
 
+  * *hibernatePlugin.searchMappingsInsideJars* (version 2.1.1+):If <b>true</b>, @SessionTarget and @TransactionTarget will be searched in Jar files (performance will decrease). Use <b>true</b> only if you have one of these annotations in classes inside Jar files.<br/><b>Optional</b>. Default <b>false</b>.<hr/>
+
+ 
+
+
 ==Easiest configuration==
 
 If you do not use a custom class as a Hibernate Session Factory and don't want to disable auto close sessions function, you will need to use just <u>2</u> properties in your project:
