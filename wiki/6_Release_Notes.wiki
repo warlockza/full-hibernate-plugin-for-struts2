@@ -6,7 +6,7 @@
 
   * _Bug fix_: <a href="http://code.google.com/p/full-hibernate-plugin-for-struts2/issues/detail?id=7&can=1">Issue 7</a> fixed.
   * _New Feature_: JDBC Connection Test by Hibernate Configuration file at *Hibernate Manager Web Tool*
-  * _Improvement_: Better performance at Hibernate Core Session and Transaction injection by Annotations with the new *hibernatePlugin.searchMappingsInsideJars* property.
+  * _Improvement_: Better performance at Hibernate Core Session and Transaction injection by Annotations [http://code.google.com/p/full-hibernate-plugin-for-struts2/wiki/3_Hibernate_Core_Sessions_Transactions_injecton (read about the new *hibernatePlugin.searchMappingsInsideJars* property)].
 
 
 
