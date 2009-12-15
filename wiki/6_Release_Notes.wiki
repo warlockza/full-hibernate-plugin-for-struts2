@@ -1,6 +1,15 @@
 #summary Release Notes
 
 
+== Version 2.1.1 GA (_15 dec 2009_)==
+
+
+  * _Bug fix_: <a href="http://code.google.com/p/full-hibernate-plugin-for-struts2/issues/detail?id=7&can=1">Issue 7</a> fixed.
+  * _New Feature_: JDBC Connection Test by Hibernate Configuration file at *Hibernate Manager Web Tool*
+  * _Improvement_: Hibernate Core Session and Transaction injection by Annotations optimized by new *hibernatePlugin.searchMappingsInsideJars* property.
+
+
+
 == Version 2.1 GA (_20 nov 2009_)==
 
 
