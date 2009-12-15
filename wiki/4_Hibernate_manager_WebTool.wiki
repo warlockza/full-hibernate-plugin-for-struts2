@@ -2,7 +2,7 @@
 
 = Introduction =
 
-This feature provides an WEB front-end tool for view and reload your Hibernate Core configurations.
+This feature provides an WEB front-end tool for view, reload and test your Hibernate Core configurations.
 
 Yout can provide this tool in your context in a public way or protect this by 2 ways: IPs/Hosts list or HTTP Autentication.
 
