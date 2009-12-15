@@ -7,6 +7,8 @@ Hibernate Validator is a fantastic validation framework. Following the DRY (Don'
 
 Annotations are a very convenient and elegant way to specify invariant constraints on the domain model implementation, the persistent classes. Hibernate Validator comes bundled with a set of common validations (@NotNull, @Email, @Max, and so on), and you can build you own validation rules very easily.
 
+*This plugin is compatible only with _Hibernate Validator 3.1.0_*
+
 More about this framework at http://www.hibernate.org/412.html
 
 Hibernate Validator Manual:<br/>
