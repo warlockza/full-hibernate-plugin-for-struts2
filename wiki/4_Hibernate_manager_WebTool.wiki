@@ -37,7 +37,7 @@ Configuration property: *hibernatePlugin.manager.validIpsHosts*<br/>
 Comma-separated IP numbers or host names that can access the Hibernate Manager Web Tool.
 This property is *Optional*. Default *127.0.0.1* (the famous _localhost_);
 
-<i>Examples: 10.1.0.3, localhost, admim.my.domain, pc1.my.domain </i>
+<i>Examples: 10.1.0.3, myhost, admim.mydomain, pc1.mydomain.com </i>
 
 
 == HTTP Autentication Security ==
