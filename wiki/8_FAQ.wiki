@@ -1,3 +1,5 @@
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2SC696DUFMKPG"><img src="http://www.avalihc.com.br/v01/donate-bottom"/></a>
+
 #summary Frequently Asked Questions.
 
 === 1. I was using the Hibernate Session Plugin. Do I need to migrate? ===
