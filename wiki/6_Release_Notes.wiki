@@ -1,6 +1,13 @@
 #summary Release Notes
 
 
+== Version 2.2.1 GA (_11 sep 2010_)==
+
+
+  * _Bug fix_: <a href="http://code.google.com/p/full-hibernate-plugin-for-struts2/issues/detail?id=10&can=1">Issue 20</a> fixed.
+
+
+
 == Version 2.2 GA (_08 mar 2010_)==
 
 
